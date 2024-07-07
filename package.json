@@ -3,7 +3,7 @@
   "name": "hevy-extensions",
   "title": "Hevy Extensions",
   "description": "The extension will help you access your routines and workouts on the Hevy side.",
-  "icon": "command-icon.png",
+  "icon": "hevy_icon.png",
   "author": "alexandertsukanov",
   "categories": [
     "Productivity"
@@ -12,15 +12,16 @@
   "commands": [
     {
       "name": "index",
-      "title": "Get my routines",
-      "subtitle": "Get my routines",
+      "title": "Get My Routines",
+      "subtitle": "Get My Routines",
       "description": "Template for showing a static list and a detail view",
       "mode": "view"
     }
   ],
   "tools": null,
   "dependencies": {
-    "@raycast/api": "^1.76.0"
+    "@raycast/api": "^1.76.0",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^1.0.6",
@@ -30,6 +31,15 @@
     "prettier": "^3.0.3",
     "typescript": "^5.2.2"
   },
+  "preferences": [
+    {
+      "name": "key",
+      "type": "password",
+      "title": "Hevy Key",
+      "required": true,
+      "description": "Your Hevy Key"
+    }
+  ],
   "scripts": {
     "build": "ray build -e dist",
     "dev": "ray develop",
