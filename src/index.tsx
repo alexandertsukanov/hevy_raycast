@@ -7,7 +7,6 @@ interface HevyKey {
 
 export default function Command() {
   const preferenceValues = getPreferenceValues<HevyKey>();
-  console.log(preferenceValues);
   return (
     <List>
       <List.Item

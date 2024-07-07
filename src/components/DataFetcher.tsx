@@ -1,6 +1,7 @@
 import { useState, useEffect, FC } from "react";
-import { Detail } from "@raycast/api";
-import fetch from 'node-fetch';
+import { Action, ActionPanel, Detail, List } from "@raycast/api";
+import fetch from "node-fetch";
+import { Routine } from "../interfaces/Routine";
 
 interface DataFetcherProps {
   url: string;
@@ -56,7 +57,11 @@ const DataFetcher: FC<DataFetcherProps> = (dataFetcherProps) => {
   }
 
   return (
-    <Detail markdown={JSON.stringify(dataState.data)} />
+    <List>
+      {dataState.data.routines.map((routine: Routine, index: string) => (
+        <List.Item id={index} key={routine.id} title={routine.title} />
+        ))}
+    </List>
   );
 };
 
