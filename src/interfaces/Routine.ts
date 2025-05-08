@@ -14,7 +14,7 @@ export interface Routine {
   /** Timestamp of when the routine was last updated */
   updated_at: string;
   
-  /** Timestamp of when the routine was created */
+  /** Timestamp of when the routine was one created */
   created_at: string;
   
   /** Array of exercises included in this routine */
